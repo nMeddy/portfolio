@@ -14,11 +14,11 @@
   font-weight: lighter;
   transition: 0.1s ease 0.15s;
 }
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 a {
   text-decoration: none;
@@ -47,6 +47,7 @@ a {
   margin-right: 10px;
 }
 .Navbar {
+  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -56,20 +57,20 @@ a {
   z-index: 999;
 }
 .clr {
-    color: var(--textBlue);
+  color: var(--textBlue);
 }
 /* DESKTOP DEVICE */
 @media screen and (min-width: 760px) {
-    .Navbar {
-        background-color: #fff;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-content: center;
-      top: 0;
-      position: sticky;
-      z-index: 999;
-    }
+  .Navbar {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    top: 0;
+    position: sticky;
+    z-index: 999;
+  }
   .deskMenu {
     margin-left: 5rem;
     display: flex;
@@ -105,7 +106,7 @@ a {
   }
 
   /* MAIN PART */
-  .mainPart{
+  .mainPart {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -113,25 +114,35 @@ a {
     align-content: center;
   }
 
-  .partOne, #container{
-   /*  width: 60%; */
+  .partOne,
+  #container {
+    /*  width: 60%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
     margin: 0 3rem;
   }
-  .partOne>.topText{
+  .partOne > .topText {
     gap: -1rem;
   }
-  .partSeconde{
+  .partSeconde {
     justify-content: flex-end;
     padding: 2rem;
   }
-  .partSeconde>.Img{
-    display: block;
-    width: 85vh;
-    height: 85vh;
+  .partSeconde >.container> .Img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: xx-large;
+  }
+  
+  /* TECHNOLOGYiconPART */
+  .techIcon{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: xx-large;
   }
 }
 
@@ -181,5 +192,37 @@ a {
   }
   .socialMenu {
     display: none;
+  }
+  .mainPart {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
+  .partOne,
+  #container {
+    /*  width: 60%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    margin: 0 3rem;
+  }
+  .partOne > .topText>h3 h2 {
+    gap: -1rem;
+  }
+  .partOne>#container>button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+   /* TECHNOLOGYiconPART */
+   .techIcon{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: xx-large;
   }
 }
