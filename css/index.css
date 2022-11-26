@@ -1,0 +1,142 @@
+/* COLOR CUSTOME */
+:root {
+  --textColor: #1111;
+  --text-light: #686666da;
+  --bg-color: #0f0f0f;
+  --textWhite: #ffffff;
+  --midnight: #104f55;
+  --textBlue: rgb(0, 0, 255);
+}
+
+/* GENERAL CUSTOME */
+* {
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  transition: 0.1s ease 0.15s;
+}
+a {
+  text-decoration: none;
+  color: var(--bg-color);
+}
+.container {
+  margin: 0.3rem;
+  padding: 1.5rem;
+  display: flex;
+}
+.btn {
+  border-radius: 0.7rem;
+  color: var(--textWhite);
+  background-color: rgb(0, 0, 255);
+}
+.btn:hover {
+  border-radius: 0.7rem;
+  color: var(--textWhite);
+  background-color: rgb(67, 67, 247);
+}
+#icon {
+  color: var(--textBlue);
+  margin-right: 10px;
+}
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  padding: 0.3rem;
+}
+.clr {
+  color: var(--textBlue);
+}
+/* DESKTOP DEVICE */
+@media screen and (min-width: 760px) {
+  .deskMenu{
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+  }
+  .deskMenu>span{
+    margin-right: 1rem;
+  }
+  /* SIDENAV MENU LINKS */
+  .mainMenu a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: var(--textBlue);
+    display: none;
+    transition: 0.3s;
+    visibility: hidden;
+  }
+  .mainMenu .close {
+    position: abslute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .burgerIcon {
+    display: none;
+    width: 35px;
+    height: 5px;
+    color: #242424;
+    padding-top: 1.7rem;
+    visibility: visible;
+  }
+  .socialMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1.7rem;
+    row-gap: 1rem;
+  }
+}
+
+/* TABLET & MOBILE DEVICE */
+@media screen and (max-width: 760px) {
+  .burgerIcon {
+    display: block;
+    width: 35px;
+    height: 5px;
+    color: #242424;
+    padding-top: 1.7rem;
+    visibility: visible;
+  }
+  .mainMenu {
+    height: 30%;
+    width: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -500px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: right 0.7s ease;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+  }
+  .mainMenu a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: var(--textBlue);
+    display: block;
+    transition: 0.3s;
+  }
+  .burgerIcon {
+    display: block;
+    width: 35px;
+    height: 5px;
+    color: #242424;
+    padding-top: 1.7rem;
+    visibility: visible;
+  }
+  .mainMenu.active {
+    right: 0;
+  }
+  .deskMenu{
+    display: none;
+  }
+  .socialMenu {
+    display: none;
+  }
+}
