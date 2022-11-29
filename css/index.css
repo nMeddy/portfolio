@@ -17,8 +17,6 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
 }
 a {
   text-decoration: none;
@@ -59,6 +57,28 @@ a {
 .clr {
   color: var(--textBlue);
 }
+footer{
+    background-color: #242424;
+    bottom: 0;
+    height: 20vh;
+    margin-bottom: -1rem;
+    color: var(--textWhite);
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+footer>.container{
+ display: flex;
+ flex-direction: column-reverse;
+ justify-content: center;
+ align-self: center;
+}
+footer>.container>span{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-self: center;
+   }
 /* DESKTOP DEVICE */
 @media screen and (min-width: 760px) {
   .Navbar {
@@ -110,13 +130,12 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-self: center;
     align-content: center;
   }
 
   .partOne,
   #container {
-    /*  width: 60%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,17 +149,72 @@ a {
     justify-content: flex-end;
     padding: 2rem;
   }
-  .partSeconde >.container> .Img {
+  .partSeconde > .container > .Img {
     display: flex;
     justify-content: center;
     align-self: center;
     font-size: xx-large;
   }
-  
+
   /* TECHNOLOGYiconPART */
-  .techIcon{
+  .techIcon {
     display: flex;
     justify-content: center;
+    align-self: center;
+    font-size: xx-large;
+  }
+
+  /* SERVICES PART */
+  .ourServices {
+    background-color: var(--text-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: center;
+    padding: 3rem 4rem;
+    columns: 2;
+    color: var(--textWhite);
+  }
+  .ourServices > .left > #container {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+  }
+  .ourServices > .left > #container > .service-1 > div > .Img {
+    padding: 0.2rem;
+    margin: 3rem 0;
+    height: 40vh;
+    border-radius: 3rem;
+    border: 3px solid var(--textWhite);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  .ourServices > .right > #container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+  }
+  .ourServices > .right > #container-2 > div > .Img-2 {
+    padding: 0.2rem;
+    margin: 3rem 0;
+    /*     height: 70vh; */
+    border-radius: 3rem;
+    border: 3px solid var(--textWhite);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* CONTACT PART */
+  .ourContact > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10em;
+  }
+  .ourContact > .container > .textZone {
+    display: flex;
+    align-self: center;
+  }
+  .ourContact > .container > .FootersocialMenu {
+    display: flex;
     align-self: center;
     font-size: xx-large;
   }
@@ -157,20 +231,21 @@ a {
     visibility: visible;
   }
   .mainMenu {
-    height: 30%;
-    width: 70px;
+    /*  width: 70px; */
     position: fixed;
     z-index: 1;
-    top: 0;
-    right: -500px;
+    top: 670px;
+    /* bottom: 0; */
+    display: flex;
+    justify-content: center;
     background-color: #e8e8e8;
-    padding-top: 60px;
-    transition: right 0.7s ease;
-    border-top-left-radius: 5rem;
-    border-bottom-left-radius: 5rem;
+    transition: bottom 0.7s ease;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
   .mainMenu a {
-    padding: 8px 8px 8px 32px;
+    padding: 10px 40px;
     font-size: 25px;
     color: var(--textBlue);
     display: block;
@@ -185,7 +260,7 @@ a {
     visibility: visible;
   }
   .mainMenu.active {
-    right: 0;
+    top: -10rem;
   }
   .deskMenu {
     display: none;
@@ -210,19 +285,124 @@ a {
     gap: 1rem;
     margin: 0 3rem;
   }
-  .partOne > .topText>h3 h2 {
+  .partOne > .topText > h3 h2 {
     gap: -1rem;
   }
-  .partOne>#container>button{
+  .partOne > #container > button {
     display: flex;
     justify-content: center;
     align-self: center;
   }
-   /* TECHNOLOGYiconPART */
-   .techIcon{
+  /* TECHNOLOGYiconPART */
+  .techIcon {
     display: flex;
     justify-content: center;
     align-self: center;
     font-size: xx-large;
+  }
+  /* SERVICES PART */
+  .ourServices {
+    background-color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    padding: 3rem 4rem;
+    columns: 2;
+    color: var(--textWhite);
+  }
+  .ourServices > .left > #container > h1 {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .ourServices > .left > #container > .service-1 {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 4rem;
+  }
+  .ourServices > .left > #container > .service-1 > div > .Img {
+    padding: 0.2rem;
+    margin: 3rem 0;
+    margin-left: -2.5rem;
+    max-height: 40vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 3rem;
+    border: 3px solid var(--textWhite);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  .ourServices > .right > #container-2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+  }
+  .ourServices > .right > #container-2 > div > .Img-2 {
+    padding: 0.2rem;
+    margin: 3rem 0;
+    height: 40vh;
+    border-radius: 3rem;
+    border: 3px solid var(--textWhite);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* CONTACT PART */
+  .ourContact > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10em;
+  }
+  .ourContact > .container > .textZone {
+    display: flex;
+    align-self: center;
+    text-align: center;
+  }
+  .ourContact > .container > .FootersocialMenu {
+    display: flex;
+    align-self: center;
+    font-size: xx-large;
+  }
+}
+
+/* SMALLEST DEVICE */
+@media screen and (max-width: 400px) {
+  .mainMenu {
+    /*  width: 70px; */
+    position: fixed;
+    z-index: 1;
+    top: 800px;
+    /* bottom: 0; */
+    display: flex;
+    justify-content: center;
+    background-color: #e8e8e8;
+    transition: bottom 0.7s ease;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  .ourServices > .left > #container > .service-1 {
+  }
+  .ourServices > .left > #container > .service-1 > div > .Img {
+    padding: 0.2rem;
+    margin-left: -4rem;
+    height: 30vh;
+    width: 40vh;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 3rem;
+    border: 3px solid var(--textWhite);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  .ourServices > .left > #container > .service-1 {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
   }
 }
