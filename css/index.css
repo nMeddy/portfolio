@@ -362,6 +362,7 @@ footer>.container>span{
     display: flex;
     align-self: center;
     text-align: center;
+    display: ;
   }
   .ourContact > .container > .FootersocialMenu {
     display: flex;
@@ -373,15 +374,16 @@ footer>.container>span{
 /* SMALLEST DEVICE */
 @media screen and (max-width: 400px) {
   .mainMenu {
-    /*  width: 70px; */
+    width: 60px;
     position: fixed;
+    padding-right: 3rem;
+    top: 0;
     z-index: 1;
-    top: 800px;
-    /* bottom: 0; */
-    display: flex;
+    right: 0;
+    display: block;
     justify-content: center;
     background-color: #e8e8e8;
-    transition: bottom 0.7s ease;
+    transition: right 0.7s ease;
     border-radius: 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   }
